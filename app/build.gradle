@@ -34,6 +34,12 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    apply plugin: 'kotlin-kapt'
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+        }
+    }
 }
 
 dependencies {
@@ -48,5 +54,5 @@ dependencies {
     androidTestImplementation libs.androidx.espresso.core
 
     implementation 'com.alibaba:arouter-api:1.5.2'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+    kapt 'com.alibaba:arouter-compiler:1.5.2'
 }

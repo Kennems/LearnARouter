@@ -11,8 +11,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.alibaba.android.arouter.facade.annotation.Route;
 
 @Route(path = "/app/main3")  // 标记页面的路由地址
-public class MainActivity3 extends AppCompatActivity {
-
+public class MainActivity3 extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
